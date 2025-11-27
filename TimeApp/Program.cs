@@ -64,21 +64,7 @@ namespace TimeApp
 
         }
 
-        private static int CalculateDailyUsageMinutes(string appid, DateTime day, List <UsageSession> sessions)
-        {
-            int minutosTotal = 0;
 
-            foreach(UsageSession session in sessions)
-            {
-                if(session.AppId == appid && session.StartTime.Date==day.Date)
-                {
-                    minutosTotal += session.GetDurationMinutes();
-                }
-              
-            }
-            return minutosTotal;
-
-        }
 
 
 
